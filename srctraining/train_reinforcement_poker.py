@@ -1,5 +1,5 @@
-from PlantvsAi_zombitx64.game.reinforcement_poker_model import ReinforcementPokerModel, AdvancedSelfLearningModel
-from PlantvsAi_zombitx64.game.poker_model import PokerModel
+from srcmodels.reinforcement_poker_model import ReinforcementPokerModel, AdvancedSelfLearningModel
+from srcmodels.poker_model import PokerModel
 import argparse
 import os
 

@@ -1,5 +1,5 @@
-from PlantvsAi_zombitx64.game.poker_data_generator import PokerDataGenerator
-from PlantvsAi_zombitx64.game.poker_model import PokerModel
+from srcdata.poker_data_generator import PokerDataGenerator
+from srcmodels.poker_model import PokerModel
 import os
 
 def main():

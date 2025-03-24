@@ -1,5 +1,5 @@
 import numpy as np
-from poker import Card, PokerHand
+from srccore.poker import Card, PokerHand
 import json
 import os
 

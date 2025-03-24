@@ -1,0 +1,16 @@
+# Core dependencies
+numpy
+pandas
+torch
+transformers
+tqdm
+
+# GUI dependencies
+PyQt5
+
+# ML/RL dependencies
+gymnasium
+stable-baselines3
+
+# Hugging Face integration
+huggingface-hub

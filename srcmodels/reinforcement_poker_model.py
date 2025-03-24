@@ -7,7 +7,7 @@ import os
 import random
 from collections import deque
 import safetensors.numpy
-from PlantvsAi_zombitx64.game.poker_model import PokerModel, Card, PokerHand
+from srcmodels.poker_model import PokerModel, Card, PokerHand
 
 class ReinforcementPokerModel(PokerModel):
     """
@@ -140,7 +140,7 @@ class ReinforcementPokerModel(PokerModel):
 
     def train_self_play(self, num_games=1000, update_target_every=100, save_every=500):
         """เทรนโมเดลโดยการเล่นกับตัวเอง (Self-Play)"""
-        from PlantvsAi_zombitx64.game.poker import PokerGame
+        from srccore.poker import PokerGame
         
         print(f"เริ่มการเรียนรู้ด้วยตัวเองผ่านการเล่น {num_games} เกม...")
         
@@ -310,7 +310,7 @@ class AdvancedSelfLearningModel(ReinforcementPokerModel):
     
     def train_with_opponent(self, opponent_model, num_games=1000, update_target_every=50, save_every=200):
         """เรียนรู้โดยการเล่นกับคู่ต่อสู้ที่เป็นโมเดลอื่น"""
-        from PlantvsAi_zombitx64.game.poker import PokerGame
+        from srccore.poker import PokerGame
         
         print(f"เริ่มการเรียนรู้โดยเล่นกับคู่ต่อสู้ {num_games} เกม...")
         

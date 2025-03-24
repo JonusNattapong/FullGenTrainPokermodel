@@ -6,7 +6,7 @@ import json
 import os
 import safetensors.numpy
 import tensorflow as tf
-from poker_data_generator import PokerDataGenerator
+from srcdata.poker_data_generator import PokerDataGenerator
 
 class Card:
     def __init__(self, suit, rank):

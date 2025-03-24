@@ -12,8 +12,8 @@ import numpy as np
 # เพิ่มไดเร็กทอรีหลักเข้าไปใน path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
-from PlantvsAi_zombitx64.game.reinforcement_poker_model import ReinforcementPokerModel, AdvancedSelfLearningModel
-from PlantvsAi_zombitx64.game.poker_model import PokerModel
+from srcmodels.reinforcement_poker_model import ReinforcementPokerModel, AdvancedSelfLearningModel
+from srcmodels.poker_model import PokerModel
 
 class TrainingGUI:
     def __init__(self, root):
@@ -325,7 +325,7 @@ class TrainingGUI:
     
     def _train_self_play(self, model):
         """เทรนโดยการเล่นกับตัวเอง"""
-        from PlantvsAi_zombitx64.game.poker import PokerGame
+        from srccore.poker import PokerGame
         
         # สร้างเกมใหม่
         game = PokerGame()
@@ -397,7 +397,7 @@ class TrainingGUI:
     
     def _train_with_opponent(self, model, opponent):
         """เทรนโดยการเล่นกับคู่แข่ง"""
-        from PlantvsAi_zombitx64.game.poker import PokerGame
+        from srccore.poker import PokerGame
         
         # สร้างเกมใหม่
         game = PokerGame()

@@ -299,13 +299,13 @@ class PokerGame:
         
         # Initialize poker models
         try:
-            from poker_model import PokerModel
+            from srcmodels.poker_model import PokerModel
             self.poker_model = PokerModel()
             self.poker_model.load_model()
             
             # ใช้โมเดลแบบ Reinforcement Learning ถ้ามีไฟล์โมเดลอยู่
             try:
-                from PlantvsAi_zombitx64.game.reinforcement_poker_model import ReinforcementPokerModel, AdvancedSelfLearningModel
+                from srcmodels.reinforcement_poker_model import ReinforcementPokerModel, AdvancedSelfLearningModel
                 
                 # ลองโหลดโมเดล reinforcement learning
                 self.reinforcement_model = ReinforcementPokerModel()
@@ -1389,7 +1389,7 @@ if __name__ == "__main__":
                 if ai_mode == 2:
                     try:
                         # ลองเรียกใช้ huggingface model
-                        from huggingface_poker import load_model, predict
+                        from srcutils.huggingface_poker import load_model, predict
                         
                         # แสดงว่ากำลังใช้ advanced AI
                         print("Using advanced AI...")
